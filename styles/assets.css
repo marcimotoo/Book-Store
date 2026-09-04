@@ -86,3 +86,26 @@ input {
   translate: -10px -16px;
   width: auto;
 }
+
+button {
+  background: var(--actzent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 12px 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--actzent-color2);
+  color: var(--actzent-color);
+  transform: scale(1.05);
+}
+
+.center_button {
+  display: flex;
+  justify-content: center;
+}

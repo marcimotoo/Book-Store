@@ -1,5 +1,6 @@
 function getBookCardTemplate(i) {
   return /*html*/ `
+  
     <article class="book-card">
       <h2>${books[i].name}</h2>
           <img src="./assets/images/${books[i].src}" alt="">
