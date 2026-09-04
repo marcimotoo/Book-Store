@@ -4,18 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Store</title>
+    <link rel="shortcut icon" href="./assets/images/book_icon.png" type="image/x-icon" />
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./button.css" />
-    <link rel="stylesheet" href="./variables.css" />
+    <link rel="stylesheet" href="./styles/assets.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body onload="renderBookSection()">
     <header>
-      <h2>Book Store</h2>
+      <section class="header-footer-section">
+        <img src="./assets/images/book_icon.png" alt="" />
+        <h2>Book Store</h2>
+      </section>
     </header>
     <main>
       <h1>Eine auswahl an fantastischen Büchern</h1>
       <section id="book-section"></section>
     </main>
+    <footer>
+      <section class="header-footer-section">
+        <p>Erstellt von Marcel Niemann</p>
+      </section>
+    </footer>
   </body>
 </html>

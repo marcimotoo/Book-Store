@@ -1,0 +1,88 @@
+.price-and-like img {
+  cursor: pointer;
+  display: block;
+  height: auto;
+  width: 35px;
+  object-fit: cover;
+  margin-left: 8px;
+}
+
+body {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: var(--actzent-color2);
+  --sb-size: 7px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.comment-section {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: var(--actzent-color2);
+  --sb-size: 7px;
+}
+
+.comment-section::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: 0;
+}
+
+.comment-section::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+.comment-section::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .comment-section {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+input {
+  color: var(--actzent-color2);
+  background: none;
+
+  width: 100%;
+
+  border: 0;
+  border-radius: 10px;
+  padding: 0 8px 0 8px;
+  margin: 0 8px 0 8px;
+}
+
+.send-button {
+  width: 100%;
+  border: none;
+  height: 30px;
+  display: flex;
+  margin: 8px;
+}
+
+.send-button img {
+  cursor: pointer;
+  height: 40px;
+  translate: -10px -16px;
+  width: auto;
+}

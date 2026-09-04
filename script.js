@@ -1,247 +1,47 @@
-let books = [
-  {
-    name: "Die Geheimnisse des Ozeans",
-    author: "Clara Meer",
-    likes: 1250,
-    liked: true,
-    price: 19.99,
-    publishedYear: 2018,
-    genre: "Fantasy",
-    src: "./book-images/die_geheimnisse_des_ozeans.jpg",
-    comments: [
-      {
-        name: "Leser123",
-        comment: "Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.",
-      },
-      {
-        name: "Bookworm84",
-        comment: "Eine romantische Geschichte, die mein Herz berührt und mich zum Nachdenken gebracht hat.",
-      },
-      {
-        name: "FantasyFanatic",
-        comment: "Eine spannende Fantasiewelt, die ich nur schwer aus der Hand legen konnte.",
-      },
-      {
-        name: "SciFiGuru",
-        comment: "Ein cleverer Science-Fiction-Roman mit interessanten Zeitreise-Konzepten und Charakteren.",
-      },
-      {
-        name: "NovelLover",
-        comment: "Ein Buch, das voller magischer Überraschungen steckt und mich begeistert hat.",
-      },
-    ],
-  },
-  {
-    name: "Der vergessene Pfad",
-    author: "Maximilian Schwarz",
-    likes: 980,
-    liked: false,
-    price: 14.5,
-    publishedYear: 2021,
-    genre: "Fantasy",
-    src: "./book-images/der_vergessene_pfad.jpg",
-    comments: [],
-  },
-  {
-    name: "Die Farben des Himmels",
-    author: "Laura Blau",
-    likes: 1520,
-    liked: true,
-    price: 22.95,
-    publishedYear: 2019,
-    genre: "Romantik",
-    src: "./book-images/die_farben_des_himmels.jpg",
-    comments: [
-      {
-        name: "LeserPeter",
-        comment: "Die Handlung war fesselnd und die Charaktere unglaublich lebendig dargestellt.",
-      },
-      {
-        name: "BookLover21",
-        comment: "Ein romantisches Meisterwerk, das mich tief berührt und bewegt hat.",
-      },
-      {
-        name: "FantasyNerd",
-        comment: "Fantastische Welten und epische Abenteuer - genau mein Geschmack!",
-      },
-      {
-        name: "SciFiEnthusiast",
-        comment: "Die Zeitreise-Elemente waren genial und haben die Story spannend gemacht.",
-      },
-      {
-        name: "ReadingAddict",
-        comment: "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat.",
-      },
-    ],
-  },
-  {
-    name: "Das Rätsel der Zeit",
-    author: "Alexander Weiss",
-    likes: 750,
-    liked: false,
-    price: 18.0,
-    publishedYear: 2020,
-    genre: "Science-Fiction",
-    src: "./book-images/das_raetsel_der_zeit.jpg",
-    comments: [
-      {
-        name: "BuchKenner",
-        comment: "Ein spannendes Abenteuer, das mich von Anfang an mitgerissen hat.",
-      },
-      {
-        name: "LeseWurm",
-        comment: "Die Liebesgeschichte war herzergreifend und wunderschön geschrieben.",
-      },
-    ],
-  },
-  {
-    name: "Der letzte Wächter",
-    author: "Sabine Grün",
-    likes: 1300,
-    liked: true,
-    price: 16.75,
-    publishedYear: 2017,
-    genre: "Fantasy",
-    src: "./book-images/der_letzte_waechter.jpg",
-    comments: [],
-  },
-  {
-    name: "Im Schatten des Mondes",
-    author: "Philipp Silber",
-    likes: 890,
-    liked: false,
-    price: 12.3,
-    publishedYear: 2022,
-    genre: "Science-Fiction",
-    src: "./book-images/im_schatten_des_mondes.jpg",
-    comments: [
-      {
-        name: "BücherLiebhaber",
-        comment: "Eine magische Reise durch eine faszinierende Fantasiewelt, absolut fesselnd.",
-      },
-      {
-        name: "Leseratte",
-        comment: "Ein packender Science-Fiction-Roman, der mich zum Nachdenken gebracht hat.",
-      },
-    ],
-  },
-  {
-    name: "Jenseits der Sterne",
-    author: "Oliver Schwarz",
-    likes: 1450,
-    liked: true,
-    price: 21.0,
-    publishedYear: 2015,
-    genre: "Science-Fiction",
-    src: "./book-images/jenseits_der_sterne.jpg",
-    comments: [
-      {
-        name: "Leser123",
-        comment: "Ein fesselndes Abenteuer, das mich von Anfang bis Ende mitgerissen hat.",
-      },
-    ],
-  },
-  {
-    name: "Das verborgene Königreich",
-    author: "Elena Gold",
-    likes: 920,
-    liked: false,
-    price: 17.5,
-    publishedYear: 2020,
-    genre: "Fantasy",
-    src: "./book-images/das_verborgene_koenigreich.jpg",
-    comments: [
-      {
-        name: "Bookworm92",
-        comment: "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat.",
-      },
-    ],
-  },
-  {
-    name: "Liebe in Zeiten des Krieges",
-    author: "Emilia Rot",
-    likes: 1800,
-    liked: true,
-    price: 19.99,
-    publishedYear: 2016,
-    genre: "Romantik",
-    src: "./book-images/liebe_in_zeiten_des_krieges.jpg",
-    comments: [
-      {
-        name: "Bibliophile23",
-        comment: "Die Fantasiewelt war so lebendig, ich konnte das Buch kaum aus der Hand legen.",
-      },
-      {
-        name: "StorySeeker",
-        comment: "Eine unglaublich berührende Liebesgeschichte, die mich tief bewegt hat.",
-      },
-      {
-        name: "SciFiExplorer",
-        comment: "Spannende Zukunftsvisionen und interessante Charaktere machten diesen Roman einzigartig.",
-      },
-    ],
-  },
-];
-
-function getBookCardTemplate(i) {
-  return /*html*/ `
-    <article class="book-card">
-      <h2>${books[i].name}</h2>
-          <img src="${books[i].src}" alt="">
-          <div class="price-and-like">
-            <p>${books[i].price} €</p>
-            <div class="display-flex">
-              <p>${books[i].likes}</p>
-              <img src="./book-images/${renderHeart(i)}.png" alt="">
-            </div>
-          </div>
-          <table>
-            <tr>
-              <th>Autor:</th>
-              <td>${books[i].author}</td>
-            </tr>
-            <tr>
-              <th>Erscheinungsjahr:</th>
-              <td>${books[i].publishedYear}</td>
-            </tr>
-            <tr>
-              <th>Genre</th>
-              <td>${books[i].genre}</td>
-            </tr>
-          </table>
-          <h3>Kommentare:</h3>
-          <div class="comment-section">
-            ${renderComments(i)}
-          </div>
-    </article>
-  `;
-}
-
 function renderBookSection() {
   let bookSectionRef = document.getElementById("book-section");
+  bookSectionRef.innerHTML = "";
+
   for (let i = 0; i < books.length; i++) {
     bookSectionRef.innerHTML += getBookCardTemplate(i);
-  }
-}
 
-function renderComments(i) {
-  let commentRefHTML = "";
-  for (let commentsIndex = 0; commentsIndex < books[i].comments.length; commentsIndex++) {
-    commentRefHTML += /*html*/ `
-      <b>${books[i].comments[commentsIndex].name}</b>
-      <p>${books[i].comments[commentsIndex].comment}</p>
+    for (let j = 0; j < books[i].comments.length; j++) {
+      document.getElementById("comment-section" + i).innerHTML += /*html*/ `
+      <b>${books[i].comments[j].name}</b>
+      <p>${books[i].comments[j].comment}</p>
     `;
+    }
   }
-  return commentRefHTML;
 }
 
-function renderHeart(i) {
-  let heartBoolean = "";
+function renderLikeHeart(i) {
+  let LikeStatus = "";
 
   if (books[i].liked == true) {
-    heartBoolean = "heartfull";
+    LikeStatus = "heartfull";
   } else {
-    heartBoolean = "heartempty";
+    LikeStatus = "heartempty";
   }
-  return heartBoolean;
+  return LikeStatus;
+}
+
+function addComment(i) {
+  const commentInputRef = document.getElementById("user_input" + i);
+  const commentInput = commentInputRef.value;
+
+  books[i].comments.push({ name: "Du", comment: commentInput });
+
+  renderBookSection();
+}
+
+function likeAddAndRemove(i) {
+  if (books[i].liked == true) {
+    books[i].liked = false;
+    books[i].likes--;
+  } else {
+    books[i].liked = true;
+    books[i].likes++;
+  }
+
+  renderBookSection();
 }
