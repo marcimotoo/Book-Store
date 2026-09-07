@@ -1,15 +1,15 @@
+const bookSectionRef = document.getElementById("book-section");
+const commentSectionRef = document.getElementById("comment-section");
+
 function renderBookSection() {
   getFromLocalStorage();
-  let bookSectionRef = document.getElementById("book-section");
+
   bookSectionRef.innerHTML = "";
 
   for (let i = 0; i < books.length; i++) {
     bookSectionRef.innerHTML += getBookCardTemplate(i);
     for (let j = 0; j < books[i].comments.length; j++) {
-      document.getElementById("comment-section" + i).innerHTML += /*html*/ `
-      <b>${books[i].comments[j].name}</b>
-      <p>${books[i].comments[j].comment}</p>
-      `;
+      document.getElementById("comment-section" + [i]).innerHTML += getBookCommentTemplate(i, j);
     }
   }
   document.getElementById("favorites_button").onclick = showFavorites;
@@ -68,16 +68,13 @@ function getFromLocalStorage() {
 
 function showFavorites() {
   getFromLocalStorage();
-  let bookSectionRef = document.getElementById("book-section");
+
   bookSectionRef.innerHTML = "";
   for (let i = 0; i < books.length; i++) {
     if (books[i].liked === true) {
       bookSectionRef.innerHTML += getBookCardTemplate(i);
       for (let j = 0; j < books[i].comments.length; j++) {
-        document.getElementById("comment-section" + i).innerHTML += /*html*/ `
-        <b>${books[i].comments[j].name}</b>
-        <p>${books[i].comments[j].comment}</p>
-        `;
+        document.getElementById("comment-section" + [i]).innerHTML += getBookCommentTemplate(i, j);
       }
     }
   }

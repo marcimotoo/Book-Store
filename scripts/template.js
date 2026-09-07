@@ -2,12 +2,12 @@ function getBookCardTemplate(i) {
   return /*html*/ `
     <article class="book-card">
       <h2>${books[i].name}</h2>
-          <img src="./assets/images/${books[i].src}" alt="">
+          <img src="./assets/images/${books[i].src}" alt="${books[i].alt}">
           <div class="price-and-like">
             <p>${books[i].price} €</p>
             <div class="display-flex">
               <p>${books[i].likes}</p>
-              <img onclick="likeAddAndRemove(${i})" src="./assets/images/${renderLikeHeart(i)}.png" alt="">
+              <img onclick="likeAddAndRemove(${i})" src="./assets/images/${renderLikeHeart(i)}.png" alt="ein herz als button">
             </div>
           </div>
           <table>
@@ -28,8 +28,16 @@ function getBookCardTemplate(i) {
           <div id="comment-section${i}" class="comment-section"></div>
           <div id="" class="send-button">
             <input id="user_input${i}" type="text" placeholder="Schreibe dein Kommentar..">
-            <img onclick="addComment(${i})" class="send-button" src="./assets/images/abschicken.png" alt="">
+            <img onclick="addComment(${i})" class="send-button" src="./assets/images/abschicken.png" alt="eine Sprechblase die zeigt das man an den kommentaren teilnehmen kann.">
           </div>
     </article>
+  `;
+}
+
+function getBookCommentTemplate(i, j) {
+  return /*html*/ `
+     
+    <b>${books[i].comments[j].name}</b>
+    <p>${books[i].comments[j].comment}</p>
   `;
 }

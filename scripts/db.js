@@ -8,6 +8,7 @@ let books = [
     publishedYear: 2018,
     genre: "Fantasy",
     src: "die_geheimnisse_des_ozeans.jpg",
+    alt: "Buchcover 'Die Geheimnisse des Ozeans' von Clara Meer",
     comments: [
       {
         name: "Leser123",
@@ -40,6 +41,7 @@ let books = [
     publishedYear: 2021,
     genre: "Fantasy",
     src: "der_vergessene_pfad.jpg",
+    alt: "Buchcover 'Der vergessene Pfad' von Maximilian Schwarz",
     comments: [],
   },
   {
@@ -51,6 +53,7 @@ let books = [
     publishedYear: 2019,
     genre: "Romantik",
     src: "die_farben_des_himmels.jpg",
+    alt: "Buchcover 'Die Farben des Himmels' von Laura Blau",
     comments: [
       {
         name: "LeserPeter",
@@ -83,6 +86,7 @@ let books = [
     publishedYear: 2020,
     genre: "Science-Fiction",
     src: "das_raetsel_der_zeit.jpg",
+    alt: "Buchcover 'Das Rätsel der Zeit' von Alexander Weiss",
     comments: [
       {
         name: "BuchKenner",
@@ -103,6 +107,7 @@ let books = [
     publishedYear: 2017,
     genre: "Fantasy",
     src: "der_letzte_waechter.jpg",
+    alt: "Buchcover 'Der letzte Wächter' von Sabine Grün",
     comments: [],
   },
   {
@@ -114,6 +119,7 @@ let books = [
     publishedYear: 2022,
     genre: "Science-Fiction",
     src: "im_schatten_des_mondes.jpg",
+    alt: "Buchcover 'Im Schatten des Mondes' von Philipp Silber",
     comments: [
       {
         name: "BücherLiebhaber",
@@ -134,6 +140,7 @@ let books = [
     publishedYear: 2015,
     genre: "Science-Fiction",
     src: "jenseits_der_sterne.jpg",
+    alt: "Buchcover 'Jenseits der Sterne' von Oliver Schwarz",
     comments: [
       {
         name: "Leser123",
@@ -150,6 +157,7 @@ let books = [
     publishedYear: 2020,
     genre: "Fantasy",
     src: "das_verborgene_koenigreich.jpg",
+    alt: "Buchcover 'Das verborgene Königreich' von Elena Gold",
     comments: [
       {
         name: "Bookworm92",
@@ -166,6 +174,7 @@ let books = [
     publishedYear: 2016,
     genre: "Romantik",
     src: "liebe_in_zeiten_des_krieges.jpg",
+    alt: "Buchcover 'Liebe in Zeiten des Krieges' von Emilia Rot",
     comments: [
       {
         name: "Bibliophile23",
