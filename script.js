@@ -17,13 +17,15 @@ function renderBookSection() {
 }
 
 function renderLikeHeart(i) {
+  let likeStatus = "";
+
   if (books[i].liked == true) {
-    LikeStatus = "heartfull";
+    likeStatus = "heartfull";
   } else {
-    LikeStatus = "heartempty";
+    likeStatus = "heartempty";
   }
 
-  return LikeStatus;
+  return likeStatus;
 }
 
 function addComment(i) {
